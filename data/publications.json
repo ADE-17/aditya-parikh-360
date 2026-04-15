@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Measuring What VLMs Don't Say: Validation Metrics Hide Clinical Terminology Erasure in Radiology Report Generation",
+    "authors": "Aditya Parikh, Aasa Feragen, Sneha Das, Stella Frank",
+    "venue": "Under review",
+    "year": "2026",
+    "link": ""
+  },
+  {
+    "title": "Fair Lung Disease Diagnosis from Chest CT via Gender-Adversarial Attention Multiple Instance Learning",
+    "authors": "Aditya Parikh, Aasa Feragen",
+    "venue": "CVPR Workshop (PHAROS-AIF-MIH, under review)",
+    "year": "2026",
+    "link": ""
+  },
+  {
+    "title": "Investigating Label Bias and Representational Sources of Age-Related Disparities in Medical Segmentation",
+    "authors": "Aditya Parikh, Sneha Das, Aasa Feragen",
+    "venue": "ISBI (Oral)",
+    "year": "2026",
+    "link": ""
+  },
+  {
+    "title": "Who Does Your Algorithm Fail? Investigating Age and Ethnic Bias in the MAMA-MIA Dataset",
+    "authors": "Aditya Parikh, Sneha Das, Aasa Feragen",
+    "venue": "MedEurIPS (Oral)",
+    "year": "2025",
+    "link": ""
+  },
+  {
+    "title": "Learning from a Few Shots: Data-efficient Cervical Vertebral Maturation Assessment",
+    "authors": "Helen Schneider, Aditya Parikh, et al.",
+    "venue": "MIDL",
+    "year": "2025",
+    "link": ""
+  },
+  {
+    "title": "The Potential of Acknowledging the Unknown: Single Positive Multi-label Learning in Medical Image Processing",
+    "authors": "Helen Schneider, Priya Priya, Aditya Parikh, et al.",
+    "venue": "MIDL",
+    "year": "2024",
+    "link": ""
+  }
+]

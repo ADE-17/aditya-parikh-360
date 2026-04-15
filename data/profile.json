@@ -1,0 +1,50 @@
+{
+  "name": "Aditya Parikh",
+  "headline": "PhD Researcher (Responsible AI) at DTU Compute",
+  "bio": "I am a doctoral researcher working on responsible AI for medical imaging and clinical vision-language models, with a focus on robustness, bias/fairness, saliency behavior, decoding effects, and clinically faithful deployment.",
+  "profilePhoto": "assets/photos/profile.jpg",
+  "links": [
+    { "label": "Email", "url": "mailto:adinparikh@gmail.com" },
+    { "label": "GitHub", "url": "https://github.com/adipa" },
+    { "label": "Google Scholar", "url": "https://scholar.google.com/" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/" }
+  ],
+  "currentWorkSummary": "Current work centers on responsible medical AI: evaluating and improving clinical reliability of vision and vision-language models under real-world bias and distribution shift.",
+  "currentWorkItems": [
+    "PhD research at DTU Compute on trustworthy vision and vision-language models for radiology.",
+    "Analyzing decoding behavior, saliency alignment, and clinical terminology fidelity in report generation.",
+    "Studying fairness across age, gender, and ethnicity with robust subgroup evaluation protocols."
+  ],
+  "workExperience": [
+    {
+      "role": "Doctoral Researcher",
+      "org": "DTU Compute, Denmark",
+      "period": "Sep 2025 - Present",
+      "summary": "Research in responsible AI for medical data, including clinical reliability and fairness of vision and vision-language models."
+    },
+    {
+      "role": "Research Assistant (Machine Learning)",
+      "org": "Fraunhofer IAIS, Germany",
+      "period": "Sep 2023 - Aug 2025",
+      "summary": "Built VLM and weak/single-positive learning pipelines for medical imaging to improve performance while reducing annotation effort."
+    },
+    {
+      "role": "Master Thesis Student",
+      "org": "MAD Lab (with Fraunhofer IAIS), FAU",
+      "period": "Dec 2024 - May 2025",
+      "summary": "Designed organ-specific encoder-decoder segmentation frameworks for laparoscopic imaging under class imbalance."
+    },
+    {
+      "role": "Research Assistant (Algorithm Development)",
+      "org": "Fraunhofer IIS, Germany",
+      "period": "Jan 2023 - Aug 2023",
+      "summary": "Developed adaptive filtering methods for non-stationary acoustic echo cancellation with improved convergence and efficiency."
+    }
+  ],
+  "galleryPhotos": [
+    { "src": "assets/photos/profile.jpg", "alt": "Profile photo" },
+    { "src": "assets/photos/research-1.jpg", "alt": "Research activity" },
+    { "src": "assets/photos/talk-1.jpg", "alt": "Conference talk" }
+  ],
+  "lastUpdated": "2026-04-15"
+}

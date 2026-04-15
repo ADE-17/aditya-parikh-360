@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Portfolio</title>
+  <meta name="description" content="Personal research portfolio with current work, updates, and experience.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">Research Portfolio</a>
+      <div class="nav-links">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="publications.html">Publications</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <img id="profilePhoto" class="profile-photo" src="assets/photos/profile.jpg" alt="Profile photo">
+      <div>
+        <h1 id="name">Your Name</h1>
+        <p id="headline" class="headline">Your role and research focus</p>
+        <p id="bio" class="muted">
+          Add a short professional bio here.
+        </p>
+        <p class="links" id="profileLinks"></p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Current Work and Progress</h2>
+      <p id="currentWorkSummary" class="muted">Loading...</p>
+      <ul id="currentWorkList" class="clean-list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Updates Timeline</h2>
+      <ul id="timelineList" class="timeline"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Work Experience</h2>
+      <ul id="experienceList" class="experience-list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Gallery</h2>
+      <p class="muted">Add your photos in <code>assets/photos/</code>, then list them in <code>data/profile.json</code>.</p>
+      <div id="gallery" class="gallery"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="container muted">Built with GitHub Pages. Last updated <span id="lastUpdated">-</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

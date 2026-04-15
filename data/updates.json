@@ -1,0 +1,27 @@
+[
+  {
+    "date": "2026",
+    "title": "Under review: radiology VLM terminology erasure study",
+    "details": "Submitted work on how common validation metrics can hide clinical terminology erasure in report generation."
+  },
+  {
+    "date": "2026",
+    "title": "Under review: fair lung disease diagnosis from chest CT",
+    "details": "CVPR workshop submission on gender-adversarial attention MIL for fairness-aware chest CT diagnosis."
+  },
+  {
+    "date": "2026",
+    "title": "ISBI oral presentation",
+    "details": "Presented work on label bias and age-related disparities in medical segmentation."
+  },
+  {
+    "date": "2025",
+    "title": "Started PhD at DTU Compute",
+    "details": "Began doctoral research focused on responsible AI for medical imaging and multimodal clinical models."
+  },
+  {
+    "date": "2025",
+    "title": "MedEurIPS oral presentation",
+    "details": "Presented bias analysis in the MAMA-MIA dataset (age and ethnic disparities)."
+  }
+]
