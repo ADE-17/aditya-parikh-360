@@ -1,8 +1,8 @@
 {
   "name": "Aditya Parikh",
-  "headline": "PhD Researcher — Responsible AI for Medical Imaging",
-  "affiliation": "DTU Compute, Technical University of Denmark",
-  "bio": "I am a doctoral researcher working on responsible AI for medical imaging and clinical vision-language models, with a focus on robustness, bias/fairness, saliency behavior, decoding effects, and clinically faithful deployment. My work bridges evaluation methodology, fairness diagnostics, and multimodal learning to make clinical AI systems more reliable and equitable.",
+  "headline": "Machine Learning Researcher | PhD Student",
+  "affiliation": "Department of Applied Mathematics and Computer Science, Technical University of Denmark",
+  "bio": "I work to build trustworthy and reliable AI systems. My current focus is on developing evaluation methods, metrics and bias mitigation strategies for clinical usuage.",
   "profilePhoto": "assets/photos/profile.jpg",
   "openTo": [
     "Research Collaborations",
@@ -10,10 +10,10 @@
     "Industry Research Internships"
   ],
   "links": [
-    { "label": "Email", "url": "mailto:adinparikh@gmail.com", "icon": "email" },
-    { "label": "GitHub", "url": "https://github.com/adipa", "icon": "github" },
-    { "label": "Google Scholar", "url": "https://scholar.google.com/", "icon": "scholar" },
-    { "label": "LinkedIn", "url": "https://linkedin.com/", "icon": "linkedin" }
+    { "label": "Email", "url": "mailto:adipa@dtu.dk", "icon": "email" },
+    { "label": "GitHub", "url": "https://github.com/ADE-17", "icon": "github" },
+    { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=39mK19EAAAAJ&hl=en", "icon": "scholar" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/adinparikh/", "icon": "linkedin" }
   ],
   "currentWorkSummary": "Current work centers on responsible medical AI: evaluating and improving clinical reliability of vision and vision-language models under real-world bias and distribution shift.",
   "currentWorkItems": [
@@ -22,29 +22,28 @@
     "Studying fairness across age, gender, and ethnicity with robust subgroup evaluation protocols."
   ],
   "researchFocusAreas": [
-    "Responsible AI for Clinical Imaging",
+    "Responsible AI for Medical Imaging",
     "Bias, Fairness & Subgroup Reliability",
-    "Vision-Language Models",
+    "Vision-Language Models (VLMs)",
     "Report Generation Fidelity",
     "Robustness & Distribution Shift",
-    "Interpretability & Saliency Evaluation",
-    "Representation Learning",
-    "Medical Image Segmentation"
+    "Effects of Label Bias",
+    "Fairness in Image Segmentation"
   ],
   "education": [
     {
-      "degree": "PhD in Computer Science",
+      "degree": "PhD in Applied Mathematics",
       "institution": "Technical University of Denmark (DTU Compute)",
       "location": "Copenhagen, Denmark",
       "period": "Sep 2025 – Present",
-      "focus": "Responsible AI for Medical Imaging"
+      "focus": "Responsible AI"
     },
     {
       "degree": "M.Sc. in ACES (AI & Connectivity)",
       "institution": "Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)",
       "location": "Erlangen, Germany",
-      "period": "Oct 2022 – May 2025",
-      "focus": "Thesis: Representation Learning for Laparoscopic Imaging (Grade: 1.3)"
+      "period": "Oct 2022 – April 2025",
+      "focus": "Thesis: Representation Learning for Laparoscopic Imaging (Grade: 1.7)"
     }
   ],
   "workExperience": [
