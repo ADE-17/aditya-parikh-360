@@ -1,13 +1,19 @@
 {
   "name": "Aditya Parikh",
-  "headline": "PhD Researcher (Responsible AI) at DTU Compute",
-  "bio": "I am a doctoral researcher working on responsible AI for medical imaging and clinical vision-language models, with a focus on robustness, bias/fairness, saliency behavior, decoding effects, and clinically faithful deployment.",
+  "headline": "PhD Researcher — Responsible AI for Medical Imaging",
+  "affiliation": "DTU Compute, Technical University of Denmark",
+  "bio": "I am a doctoral researcher working on responsible AI for medical imaging and clinical vision-language models, with a focus on robustness, bias/fairness, saliency behavior, decoding effects, and clinically faithful deployment. My work bridges evaluation methodology, fairness diagnostics, and multimodal learning to make clinical AI systems more reliable and equitable.",
   "profilePhoto": "assets/photos/profile.jpg",
+  "openTo": [
+    "Research Collaborations",
+    "Academic Visiting Positions",
+    "Industry Research Internships"
+  ],
   "links": [
-    { "label": "Email", "url": "mailto:adinparikh@gmail.com" },
-    { "label": "GitHub", "url": "https://github.com/adipa" },
-    { "label": "Google Scholar", "url": "https://scholar.google.com/" },
-    { "label": "LinkedIn", "url": "https://linkedin.com/" }
+    { "label": "Email", "url": "mailto:adinparikh@gmail.com", "icon": "email" },
+    { "label": "GitHub", "url": "https://github.com/adipa", "icon": "github" },
+    { "label": "Google Scholar", "url": "https://scholar.google.com/", "icon": "scholar" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/", "icon": "linkedin" }
   ],
   "currentWorkSummary": "Current work centers on responsible medical AI: evaluating and improving clinical reliability of vision and vision-language models under real-world bias and distribution shift.",
   "currentWorkItems": [
@@ -16,36 +22,87 @@
     "Studying fairness across age, gender, and ethnicity with robust subgroup evaluation protocols."
   ],
   "researchFocusAreas": [
-    "Responsible AI for clinical imaging and radiology workflows",
-    "Bias, fairness, and subgroup reliability in medical machine learning",
-    "Vision-language models and report generation fidelity",
-    "Robustness, interpretability, and saliency-grounded evaluation"
+    "Responsible AI for Clinical Imaging",
+    "Bias, Fairness & Subgroup Reliability",
+    "Vision-Language Models",
+    "Report Generation Fidelity",
+    "Robustness & Distribution Shift",
+    "Interpretability & Saliency Evaluation",
+    "Representation Learning",
+    "Medical Image Segmentation"
+  ],
+  "education": [
+    {
+      "degree": "PhD in Computer Science",
+      "institution": "Technical University of Denmark (DTU Compute)",
+      "location": "Copenhagen, Denmark",
+      "period": "Sep 2025 – Present",
+      "focus": "Responsible AI for Medical Imaging"
+    },
+    {
+      "degree": "M.Sc. in ACES (AI & Connectivity)",
+      "institution": "Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)",
+      "location": "Erlangen, Germany",
+      "period": "Oct 2022 – May 2025",
+      "focus": "Thesis: Representation Learning for Laparoscopic Imaging (Grade: 1.3)"
+    }
   ],
   "workExperience": [
     {
       "role": "Doctoral Researcher",
       "org": "DTU Compute, Denmark",
-      "period": "Sep 2025 - Present",
-      "summary": "Research in responsible AI for medical data, including clinical reliability and fairness of vision and vision-language models."
+      "period": "Sep 2025 – Present",
+      "summary": "PhD research on Responsible AI — developing and rigorously evaluating vision and vision-language models for medical data, analyzing decoding effects, saliency behavior, bias/fairness, and clinical fidelity."
     },
     {
       "role": "Research Assistant (Machine Learning)",
       "org": "Fraunhofer IAIS, Germany",
-      "period": "Sep 2023 - Aug 2025",
-      "summary": "Built VLM and weak/single-positive learning pipelines for medical imaging to improve performance while reducing annotation effort."
+      "period": "Sep 2023 – Aug 2025",
+      "summary": "Built VLM and weak/single-positive learning pipelines for medical imaging (report-to-image generation, CVM classification, CheXpert-style labels), improving accuracy and reducing annotation cost."
     },
     {
       "role": "Master Thesis Student",
       "org": "MAD Lab (with Fraunhofer IAIS), FAU",
-      "period": "Dec 2024 - May 2025",
-      "summary": "Designed organ-specific encoder-decoder segmentation frameworks for laparoscopic imaging under class imbalance."
+      "period": "Dec 2024 – May 2025",
+      "summary": "Designed encoder-decoder segmentation frameworks with organ-specific decoders and knowledge sharing for laparoscopic imaging under class imbalance."
+    },
+    {
+      "role": "Research Internship (Project Thesis)",
+      "org": "MAD Lab, FAU, Germany",
+      "period": "Aug 2023 – May 2024",
+      "summary": "Developed multimodal depression predictive model using facial and physiological signals to identify facial expression attributes linked to clinical depression."
     },
     {
       "role": "Research Assistant (Algorithm Development)",
       "org": "Fraunhofer IIS, Germany",
-      "period": "Jan 2023 - Aug 2023",
-      "summary": "Developed adaptive filtering methods for non-stationary acoustic echo cancellation with improved convergence and efficiency."
+      "period": "Jan 2023 – Aug 2023",
+      "summary": "Developed adaptive filtering methods for non-stationary automotive acoustic echo cancellation, improving early convergence by ~35% and runtime efficiency by 12%."
+    },
+    {
+      "role": "Deep Learning Engineer (Intern)",
+      "org": "PixelApps.io, India",
+      "period": "Jul 2022 – Sep 2022",
+      "summary": "Built a school attendance pipeline achieving 97%+ accuracy across varied lighting/poses, robust to camera angle."
+    },
+    {
+      "role": "Machine Learning Engineer (Intern)",
+      "org": "BizAmica Softwares, India",
+      "period": "May 2021 – Dec 2022",
+      "summary": "Co-designed an AI-powered document processing system that reduced manual entry time by 10x for Indian population census data (1950–2010)."
     }
+  ],
+  "skills": {
+    "languages": ["Python", "C++", "LaTeX", "MATLAB", "SQL"],
+    "frameworks": ["PyTorch", "HuggingFace", "PyTorch Lightning", "NumPy", "Pandas", "Scikit-learn", "Matplotlib", "TensorBoard", "W&B"],
+    "tools": ["Git", "Bash", "Linux", "Docker", "ONNX", "Jupyter", "SLURM", "MPI"],
+    "cloud": ["AWS", "Google Cloud Platform", "Azure ML"]
+  },
+  "achievements": [
+    "Teaching Assistant for Responsible AI course (70+ students) at DTU",
+    "Peer Reviewer: MedEurIPS, ICAPSS, Medical Image Analysis (MedIA)",
+    "Hackathon Winner: Smart Farming (2024), Kicklehack (2024)",
+    "Kaggle Expert — Notebook rank #1500",
+    "MachineHack Global Rank 310 (top 4%)"
   ],
   "galleryPhotos": [
     { "src": "assets/photos/profile.jpg", "alt": "Profile photo" },

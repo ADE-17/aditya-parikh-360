@@ -3,32 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications | Research Portfolio</title>
-  <meta name="description" content="Publications and papers.">
+  <title>Publications — Aditya Parikh</title>
+  <meta name="description" content="Full list of publications and papers by Aditya Parikh.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav container">
-      <a class="logo" href="index.html">Research Portfolio</a>
+      <a class="nav-brand" href="index.html">Aditya Parikh</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="publications.html" aria-current="page">Publications</a>
         <a href="photography.html">Photography</a>
+        <a href="ADITYA_PARIKH_CV.pdf" target="_blank" class="nav-cv">Download CV</a>
       </div>
     </nav>
   </header>
 
   <main class="container">
-    <section class="card">
-      <h1>Papers and Publications</h1>
-      <p class="muted">Maintain this list from <code>data/publications.json</code>.</p>
-      <ul id="publicationsList" class="publication-list"></ul>
+    <section class="section" style="margin-top:1.5rem;">
+      <h1 style="font-size:1.8rem;font-weight:800;margin-bottom:1.2rem;letter-spacing:-0.5px;">Publications</h1>
+
+      <!-- Stats -->
+      <div class="pub-stats" id="pubStats"></div>
+
+      <!-- Filters -->
+      <div class="pub-filters" id="pubFilters"></div>
+
+      <!-- Publication list (grouped by year) -->
+      <div id="pubContainer"></div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p class="container muted">Built with GitHub Pages.</p>
+    <div class="container footer-inner">
+      <span class="footer-text">&copy; 2026 Aditya Parikh</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="photography.html">Photography</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>

@@ -3,42 +3,112 @@
     "title": "Measuring What VLMs Don't Say: Validation Metrics Hide Clinical Terminology Erasure in Radiology Report Generation",
     "authors": "Aditya Parikh, Aasa Feragen, Sneha Das, Stella Frank",
     "venue": "Under review",
-    "year": "2026",
-    "link": ""
+    "year": 2026,
+    "tags": ["under-review", "first-author"],
+    "links": { "paper": "", "arxiv": "", "code": "" }
   },
   {
     "title": "Fair Lung Disease Diagnosis from Chest CT via Gender-Adversarial Attention Multiple Instance Learning",
     "authors": "Aditya Parikh, Aasa Feragen",
-    "venue": "CVPR Workshop (PHAROS-AIF-MIH, under review)",
-    "year": "2026",
-    "link": ""
+    "venue": "CVPR Workshop (PHAROS-AIF-MIH)",
+    "year": 2026,
+    "tags": ["under-review", "first-author", "workshop"],
+    "links": { "paper": "", "arxiv": "", "code": "" }
   },
   {
     "title": "Investigating Label Bias and Representational Sources of Age-Related Disparities in Medical Segmentation",
     "authors": "Aditya Parikh, Sneha Das, Aasa Feragen",
-    "venue": "ISBI (Oral)",
-    "year": "2026",
-    "link": ""
+    "venue": "ISBI",
+    "year": 2026,
+    "tags": ["oral", "first-author"],
+    "links": { "paper": "", "arxiv": "", "code": "" }
   },
   {
     "title": "Who Does Your Algorithm Fail? Investigating Age and Ethnic Bias in the MAMA-MIA Dataset",
     "authors": "Aditya Parikh, Sneha Das, Aasa Feragen",
-    "venue": "MedEurIPS (Oral)",
-    "year": "2025",
-    "link": ""
+    "venue": "MedEurIPS (NeurIPS-endorsed workshop)",
+    "year": 2025,
+    "tags": ["oral", "first-author", "workshop"],
+    "links": { "paper": "", "arxiv": "", "code": "" }
+  },
+  {
+    "title": "Leveraging Transfer Learning with Class-Specific Decoders for Laparoscopic Segmentation",
+    "authors": "Priya Priya*, Aditya Parikh*, et al.",
+    "venue": "IEEE Workshop on Big Data Analytics for Medical Imaging",
+    "year": 2025,
+    "tags": ["equal-contribution", "workshop"],
+    "links": { "paper": "", "arxiv": "", "code": "" }
+  },
+  {
+    "title": "Representation Learning for Laparoscopic Imaging: A Study of Architectural Design and Multi-Level Knowledge Transfer",
+    "authors": "Aditya Parikh, Sai Jitin Jami, et al.",
+    "venue": "Master Thesis, OpenFAU",
+    "year": 2025,
+    "tags": ["first-author", "thesis"],
+    "links": { "paper": "", "arxiv": "", "code": "" }
   },
   {
     "title": "Learning from a Few Shots: Data-efficient Cervical Vertebral Maturation Assessment",
-    "authors": "Helen Schneider, Aditya Parikh, et al.",
+    "authors": "Helen Schneider*, Aditya Parikh*, et al.",
     "venue": "MIDL",
-    "year": "2025",
-    "link": ""
+    "year": 2025,
+    "tags": ["equal-contribution"],
+    "links": { "paper": "", "arxiv": "", "code": "" }
+  },
+  {
+    "title": "Effective Disjoint Representational Learning for Anatomical Segmentation",
+    "authors": "Priya Priya*, Aditya Parikh*, et al.",
+    "venue": "MIDL",
+    "year": 2025,
+    "tags": ["equal-contribution"],
+    "links": { "paper": "", "arxiv": "", "code": "" }
+  },
+  {
+    "title": "First Investigation of Deep Learning for Intraoperative Gauze Segmentation in Minimally Invasive Abdominal Surgery",
+    "authors": "Priya Priya*, Aditya Parikh, et al.",
+    "venue": "IEEE DSAA",
+    "year": 2025,
+    "tags": [],
+    "links": { "paper": "", "arxiv": "", "code": "" }
   },
   {
     "title": "The Potential of Acknowledging the Unknown: Single Positive Multi-label Learning in Medical Image Processing",
     "authors": "Helen Schneider, Priya Priya, Aditya Parikh, et al.",
     "venue": "MIDL",
-    "year": "2024",
-    "link": ""
+    "year": 2024,
+    "tags": [],
+    "links": { "paper": "", "arxiv": "", "code": "" }
+  },
+  {
+    "title": "Informed Deep Abstaining Classifier: Investigating Noise-Robust Training for Diagnostic Decision Support Systems",
+    "authors": "Helen Schneider, Sebastian Nowak, Aditya Parikh, et al.",
+    "venue": "ICONIP",
+    "year": 2024,
+    "tags": [],
+    "links": { "paper": "", "arxiv": "", "code": "" }
+  },
+  {
+    "title": "Mandibular Advancement Devices: Impact on Occlusal Dynamics and Tooth Alignment Modifications",
+    "authors": "Aylin Uyaner, Helen Schneider, Aditya Parikh, et al.",
+    "venue": "Dentistry Journal (MDPI)",
+    "year": 2024,
+    "tags": ["journal"],
+    "links": { "paper": "", "arxiv": "", "code": "" }
+  },
+  {
+    "title": "Exploring Facial Biomarkers for Depression through Temporal Analysis of Action Units",
+    "authors": "Aditya Parikh, Misha Sadegi, Bjorn Eskofier",
+    "venue": "Project Thesis",
+    "year": 2024,
+    "tags": ["first-author", "thesis"],
+    "links": { "paper": "", "arxiv": "", "code": "" }
+  },
+  {
+    "title": "Information Extraction from Unstructured Data using Augmented-AI and Computer Vision",
+    "authors": "Aditya Parikh",
+    "venue": "IJERT",
+    "year": 2022,
+    "tags": ["first-author", "journal"],
+    "links": { "paper": "", "arxiv": "", "code": "" }
   }
 ]

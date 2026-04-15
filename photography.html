@@ -3,33 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photography | Research Portfolio</title>
-  <meta name="description" content="Photography gallery with captions.">
+  <title>Photography — Aditya Parikh</title>
+  <meta name="description" content="Photography gallery by Aditya Parikh — moments from research, travel, and daily life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav container">
-      <a class="logo" href="index.html">Research Portfolio</a>
+      <a class="nav-brand" href="index.html">Aditya Parikh</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="publications.html">Publications</a>
         <a href="photography.html" aria-current="page">Photography</a>
+        <a href="ADITYA_PARIKH_CV.pdf" target="_blank" class="nav-cv">Download CV</a>
       </div>
     </nav>
   </header>
 
   <main class="container">
-    <section class="card reveal">
-      <h1>Photography</h1>
-      <p class="muted">A personal visual log of people, places, moments, and ideas around my research journey.</p>
+    <section class="section" style="margin-top:1.5rem;">
+      <h1 style="font-size:1.8rem;font-weight:800;margin-bottom:0.4rem;letter-spacing:-0.5px;">Photography</h1>
+      <p style="color:var(--text-secondary);margin-bottom:1.5rem;font-size:0.95rem;">A visual log of people, places, and moments around my research journey.</p>
       <div id="photoStories" class="photo-stories"></div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p class="container muted">Built with GitHub Pages.</p>
+    <div class="container footer-inner">
+      <span class="footer-text">&copy; 2026 Aditya Parikh</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="Enlarged photo">
+  </div>
 
   <script src="script.js"></script>
 </body>
