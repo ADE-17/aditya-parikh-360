@@ -30,7 +30,7 @@ async function initHomePage() {
 
   document.getElementById("name").textContent = profile.name || "Your Name";
   document.getElementById("headline").textContent = profile.headline || "";
-  document.getElementById("bio").textContent = profile.bio || "";
+  document.getElementById("aboutMe").textContent = profile.bio || "";
   document.getElementById("profileLinks").innerHTML = renderLinks(profile.links);
   document.getElementById("lastUpdated").textContent = profile.lastUpdated || "-";
 
@@ -43,6 +43,12 @@ async function initHomePage() {
 
   document.getElementById("currentWorkList").innerHTML = renderListItems(
     profile.currentWorkItems,
+    (item) => `<li>${item}</li>`
+  );
+
+  const researchFocusList = document.getElementById("researchFocusList");
+  researchFocusList.innerHTML = renderListItems(
+    profile.researchFocusAreas,
     (item) => `<li>${item}</li>`
   );
 
@@ -80,6 +86,27 @@ async function initHomePage() {
       )
       .join("");
   }
+
+  const highlightedWorks = document.getElementById("highlightedWorks");
+  const works = Array.isArray(profile.highlightedWorks) ? profile.highlightedWorks : [];
+  if (works.length === 0) {
+    highlightedWorks.innerHTML = "<p class='muted'>No highlighted works yet.</p>";
+  } else {
+    highlightedWorks.innerHTML = works
+      .map(
+        (work) => `
+        <article class="highlight-card">
+          ${work.image ? `<img src="${work.image}" alt="${work.title || "Highlighted work"}" loading="lazy">` : ""}
+          <div class="content">
+            ${work.concept ? `<span class="concept-tag">${work.concept}</span>` : ""}
+            <div class="item-title">${work.title || ""}</div>
+            <div class="muted">${work.description || ""}</div>
+          </div>
+        </article>
+      `
+      )
+      .join("");
+  }
 }
 
 async function initPublicationsPage() {
@@ -104,10 +131,36 @@ async function initPublicationsPage() {
   );
 }
 
+async function initPhotographyPage() {
+  const stories = document.getElementById("photoStories");
+  if (!stories) return;
+
+  const profile = await loadJson("data/profile.json");
+  const photos = Array.isArray(profile.photography) ? profile.photography : [];
+  if (photos.length === 0) {
+    stories.innerHTML = "<p class='muted'>No photography entries yet.</p>";
+  } else {
+    stories.innerHTML = photos
+      .map(
+        (photo) => `
+        <figure class="photo-story">
+          <img src="${photo.src}" alt="${photo.alt || "Photography image"}" loading="lazy">
+          <figcaption>
+            <div class="item-title">${photo.title || "Untitled"}</div>
+            <div class="muted">${photo.caption || ""}</div>
+          </figcaption>
+        </figure>
+      `
+      )
+      .join("");
+  }
+}
+
 async function bootstrap() {
   try {
     await initHomePage();
     await initPublicationsPage();
+    await initPhotographyPage();
   } catch (error) {
     console.error(error);
     const fallback = document.createElement("p");

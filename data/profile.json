@@ -15,6 +15,12 @@
     "Analyzing decoding behavior, saliency alignment, and clinical terminology fidelity in report generation.",
     "Studying fairness across age, gender, and ethnicity with robust subgroup evaluation protocols."
   ],
+  "researchFocusAreas": [
+    "Responsible AI for clinical imaging and radiology workflows",
+    "Bias, fairness, and subgroup reliability in medical machine learning",
+    "Vision-language models and report generation fidelity",
+    "Robustness, interpretability, and saliency-grounded evaluation"
+  ],
   "workExperience": [
     {
       "role": "Doctoral Researcher",
@@ -45,6 +51,46 @@
     { "src": "assets/photos/profile.jpg", "alt": "Profile photo" },
     { "src": "assets/photos/research-1.jpg", "alt": "Research activity" },
     { "src": "assets/photos/talk-1.jpg", "alt": "Conference talk" }
+  ],
+  "highlightedWorks": [
+    {
+      "title": "Clinical Terminology Erasure in Radiology VLMs",
+      "concept": "Reliability Metric Gap",
+      "description": "Shows how conventional generation metrics can miss clinically meaningful terminology drops.",
+      "image": "assets/photos/highlight-1.jpg"
+    },
+    {
+      "title": "Label Bias and Age-Disparity Analysis",
+      "concept": "Fairness Diagnostics",
+      "description": "Visualizes subgroup disparity sources and representational shifts in segmentation performance.",
+      "image": "assets/photos/highlight-2.jpg"
+    },
+    {
+      "title": "Fair Lung Disease Diagnosis with Adversarial Attention",
+      "concept": "Bias Mitigation",
+      "description": "Highlights concept-level balancing strategies for chest CT classification and fairness.",
+      "image": "assets/photos/highlight-3.jpg"
+    }
+  ],
+  "photography": [
+    {
+      "title": "Conference Day",
+      "caption": "A moment before presenting ongoing work and discussing future directions.",
+      "src": "assets/photos/talk-1.jpg",
+      "alt": "Conference talk setting"
+    },
+    {
+      "title": "Lab Work",
+      "caption": "Daily research workflow: experiments, ablations, and result validation.",
+      "src": "assets/photos/research-1.jpg",
+      "alt": "Research desk and setup"
+    },
+    {
+      "title": "Field Note",
+      "caption": "A quiet frame from my day that reflects patience and observation in research.",
+      "src": "assets/photos/photo-1.jpg",
+      "alt": "Personal photography frame"
+    }
   ],
   "lastUpdated": "2026-04-15"
 }
