@@ -1,16 +1,16 @@
 :root {
-  --bg: #f5f8fc;
-  --bg-gradient: radial-gradient(ellipse 120% 80% at 60% -10%, #eef4ff 0%, #f5f8fc 60%);
-  --surface: #ffffff;
-  --surface-hover: #f8fbff;
-  --border: #dce5f2;
-  --border-hover: #c4d2e6;
-  --text: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
-  --accent: #1d4ed8;
-  --accent-soft: rgba(29, 78, 216, 0.1);
-  --accent-hover: #1e40af;
+  --bg: #06090f;
+  --bg-gradient: radial-gradient(ellipse 120% 80% at 60% -10%, #111d35 0%, #06090f 60%);
+  --surface: #0d1525;
+  --surface-hover: #111d30;
+  --border: #172033;
+  --border-hover: #243352;
+  --text: #f0f4f8;
+  --text-secondary: #94a3b8;
+  --text-muted: #5a6f8a;
+  --accent: #3b82f6;
+  --accent-soft: rgba(59, 130, 246, 0.12);
+  --accent-hover: #60a5fa;
   --cyan: #22d3ee;
   --emerald: #34d399;
   --amber: #f59e0b;
