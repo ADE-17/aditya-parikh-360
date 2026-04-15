@@ -67,11 +67,15 @@ function renderPubItem(pub, authorName) {
 async function initHomePage() {
   if (!document.getElementById('heroName')) return;
 
-  const [profile, updates, publications] = await Promise.all([
+  const [profileRes, updatesRes, publicationsRes] = await Promise.allSettled([
     loadJson('data/profile.json'),
     loadJson('data/updates.json'),
     loadJson('data/publications.json'),
   ]);
+
+  const profile = profileRes.status === 'fulfilled' ? profileRes.value : {};
+  const updates = updatesRes.status === 'fulfilled' ? updatesRes.value : [];
+  const publications = publicationsRes.status === 'fulfilled' ? publicationsRes.value : [];
 
   const $ = id => document.getElementById(id);
 
@@ -113,6 +117,7 @@ async function initHomePage() {
   // Selected publications (first-author + oral, up to 5)
   const selected = publications
     .filter(p => (p.tags || []).some(t => t === 'first-author' || t === 'oral'))
+    .sort((a, b) => (b.year || 0) - (a.year || 0))
     .slice(0, 5);
   $('selectedPubs').innerHTML = selected.length
     ? selected.map(p => renderPubItem(p, profile.name)).join('')
