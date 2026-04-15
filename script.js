@@ -22,11 +22,10 @@ function renderListItems(items, template) {
 }
 
 async function initHomePage() {
-  const profile = await loadJson("data/profile.json");
-  const updates = await loadJson("data/updates.json");
-
   const nameEl = document.getElementById("name");
   if (!nameEl) return;
+  const profile = await loadJson("data/profile.json");
+  const updates = await loadJson("data/updates.json");
 
   document.getElementById("name").textContent = profile.name || "Your Name";
   document.getElementById("headline").textContent = profile.headline || "";
@@ -157,15 +156,19 @@ async function initPhotographyPage() {
 }
 
 async function bootstrap() {
-  try {
-    await initHomePage();
-    await initPublicationsPage();
-    await initPhotographyPage();
-  } catch (error) {
-    console.error(error);
+  const results = await Promise.allSettled([
+    initHomePage(),
+    initPublicationsPage(),
+    initPhotographyPage()
+  ]);
+
+  const firstError = results.find((result) => result.status === "rejected");
+  if (firstError) {
+    console.error(firstError.reason);
     const fallback = document.createElement("p");
     fallback.className = "muted";
-    fallback.textContent = "Could not load some content. Check JSON files in data/.";
+    fallback.textContent =
+      "Could not load some content. If you opened the HTML directly, run a local server (python -m http.server 8000) and open http://localhost:8000.";
     document.body.appendChild(fallback);
   }
 }
