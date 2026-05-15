@@ -138,22 +138,22 @@
   ],
   "photography": [
     {
-      "title": "Presenting at ISBI",
-      "caption": "Sharing ongoing research on label bias and age-related performance disparities with the medical imaging community.",
-      "src": "assets/photos/highlight-2.png",
-      "alt": "Conference presentation slide"
+      "title": "Towards Fairness under Label Bias in Image Segmentation",
+      "caption": "Label bias is insidious: We measure and mitigate it in image segmentation without clean, unbiased ground truth labels even when standard metrics don't allow.",
+      "src": "assets/photos/1.png",
+      "alt": "Label Bias in Segmentation"
     },
     {
-      "title": "Radiology Report Generation Validation",
-      "caption": "Investigating textual metrics vs clinical terminology retention in modern vision-language decoder pipelines.",
-      "src": "assets/photos/highlight-1.png",
-      "alt": "Research analysis frame"
+      "title": "Measuring What VLMs Don't Say",
+      "caption": "Standard validation metrics hide severe clinical terminology erasure in report generation (RRG). We propose CAD/WAE to measure word-association displacement.",
+      "src": "assets/photos/2.png",
+      "alt": "VLM Clinical Terminology Erasure"
     },
     {
-      "title": "Concept-Level Balancing Experiments",
-      "caption": "Visualizing gender-adversarial attention maps to ensure fair predictive distributions across protected groups.",
-      "src": "assets/photos/highlight-3.png",
-      "alt": "Fairness attention mapping"
+      "title": "Investigating Label Bias in Medical Segmentation",
+      "caption": "First study on label bias in segmentation, demonstrating how standard Dice scores obscure underlying representational harms and how automated machine-generated labels can cause more harm than they help.",
+      "src": "assets/photos/4.png",
+      "alt": "Medical Image Segmentation Bias"
     }
   ],
   "lastUpdated": "2026-05-14"
