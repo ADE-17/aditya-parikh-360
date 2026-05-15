@@ -122,18 +122,6 @@
       "concept": "Reliability Metric Gap",
       "description": "Shows how conventional generation metrics can miss clinically meaningful terminology drops.",
       "image": "assets/photos/highlight-1.png"
-    },
-    {
-      "title": "Label Bias and Age-Disparity Analysis",
-      "concept": "Fairness Diagnostics",
-      "description": "Visualizes subgroup disparity sources and representational shifts in segmentation performance.",
-      "image": "assets/photos/highlight-2.png"
-    },
-    {
-      "title": "Fair Lung Disease Diagnosis with Adversarial Attention",
-      "concept": "Bias Mitigation",
-      "description": "Highlights concept-level balancing strategies for chest CT classification and fairness.",
-      "image": "assets/photos/highlight-3.png"
     }
   ],
   "photography": [
