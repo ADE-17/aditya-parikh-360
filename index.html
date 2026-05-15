@@ -23,112 +23,106 @@
       <div class="nav-links">
         <a href="index.html" aria-current="page">Home</a>
         <a href="publications.html">Publications</a>
-        <a href="photography.html">Photography</a>
-        <a href="ADITYA_PARIKH_CV.pdf" target="_blank" class="nav-cv">Download CV</a>
       </div>
     </nav>
   </header>
 
   <main class="container">
-    <!-- Hero -->
-    <section class="card hero reveal-on-scroll" id="heroSection">
-      <div class="hero-photo-wrap">
-        <div class="hero-photo-ring">
-          <img id="profilePhoto" class="hero-photo" src="assets/photos/profile.jpg" alt="Aditya Parikh">
+    <div class="main-grid">
+      <!-- Left Hand Sidebar (News & Updates) -->
+      <aside class="sidebar-left">
+        <!-- News & Updates -->
+        <div class="sidebar-section reveal-on-scroll">
+          <h2 class="sidebar-section-title">News &amp; Updates</h2>
+          <ul class="timeline" id="timelineList" style="padding-left: 0.5rem; margin-top: 0.5rem;"></ul>
         </div>
-      </div>
-      <div class="hero-content">
-        <h1 class="hero-name" id="heroName">Aditya Parikh</h1>
-        <p class="hero-title" id="heroHeadline">PhD Researcher — Responsible AI for Medical Imaging</p>
-        <p class="hero-affiliation" id="heroAffiliation"></p>
-        <p class="hero-bio" id="heroBio"></p>
-        <div class="hero-links" id="heroLinks"></div>
-        <div class="open-to" id="heroOpenTo"></div>
-      </div>
-    </section>
+      </aside>
 
-    <!-- Research Focus -->
-    <section class="section reveal-on-scroll">
-      <div class="section-header"><h2>Research Focus</h2></div>
-      <div class="pills" id="researchPills"></div>
-    </section>
+      <!-- Main Content Column (Center) -->
+      <div class="main-content">
+        <!-- Hero -->
+        <section class="card hero reveal-on-scroll" id="heroSection">
+          <div class="hero-photo-wrap">
+            <div class="hero-photo-ring">
+              <img id="profilePhoto" class="hero-photo" src="assets/photos/profile.jpg" alt="Aditya Parikh">
+            </div>
+          </div>
+          <div class="hero-content">
+            <h1 class="hero-name" id="heroName">Aditya Parikh</h1>
+            <p class="hero-title" id="heroHeadline">PhD Researcher — Responsible AI for Medical Imaging</p>
+            <p class="hero-affiliation" id="heroAffiliation"></p>
+            <p class="hero-bio" id="heroBio"></p>
+            <div class="hero-links" id="heroLinks"></div>
+            <div class="open-to" id="heroOpenTo"></div>
+          </div>
+        </section>
 
-    <!-- Selected Publications -->
-    <section class="section reveal-on-scroll">
-      <div class="section-header">
-        <h2>Selected Publications</h2>
-        <a href="publications.html" class="section-link">All publications &rarr;</a>
+        <!-- About Me (Captioned Pictures) -->
+        <section class="section reveal-on-scroll">
+          <div class="section-header"><h2>About Me</h2></div>
+          <p style="color:var(--text-secondary); margin-bottom: 0.5rem; font-size: 0.95rem;">
+            A brief visual summary of my research workflow, community interactions, and technical pursuits.
+          </p>
+          <div class="about-grid" id="aboutGrid"></div>
+        </section>
+
+        <!-- Research Focus -->
+        <section class="section reveal-on-scroll">
+          <div class="section-header"><h2>Research Focus</h2></div>
+          <div class="pills" id="researchPills"></div>
+        </section>
+
+        <!-- Highlighted Works (Placed over Publications) -->
+        <section class="section reveal-on-scroll">
+          <div class="section-header"><h2>Highlighted Works</h2></div>
+          <p style="color:var(--text-secondary); margin-bottom:1.2rem; font-size:0.95rem;">Key figures and core concepts from recent projects and empirical evaluations.</p>
+          <div class="highlights-grid" id="highlightedWorks"></div>
+        </section>
+
+        <!-- Selected Publications -->
+        <section class="section reveal-on-scroll">
+          <div class="section-header">
+            <h2>Selected Publications</h2>
+            <a href="publications.html" class="section-link">All publications &rarr;</a>
+          </div>
+          <ul class="pub-list" id="selectedPubs"></ul>
+          <!-- Tab/Button to get to publication page below publications -->
+          <div class="pub-page-tab">
+            <a href="publications.html" class="pub-tab-btn">
+              Browse full publication page &rarr;
+            </a>
+          </div>
+        </section>
+
+
+        <!-- Contact CTA -->
+        <section class="section reveal-on-scroll">
+          <div class="cta-section">
+            <h2 class="cta-heading">Interested in collaborating?</h2>
+            <p class="cta-sub">I'm open to research collaborations, visiting positions, and industry research opportunities. Let's connect.</p>
+            <a id="ctaEmail" href="mailto:adipa@dtu.dk" class="cta-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Get in touch
+            </a>
+          </div>
+        </section>
       </div>
-      <ul class="pub-list" id="selectedPubs"></ul>
-    </section>
 
-    <!-- Highlighted Works -->
-    <section class="section reveal-on-scroll">
-      <div class="section-header"><h2>Highlighted Works</h2></div>
-      <p class="text-secondary" style="color:var(--text-secondary);margin-bottom:1rem;font-size:0.92rem;">Key figures and core concepts from recent work.</p>
-      <div class="highlights-grid" id="highlightedWorks"></div>
-    </section>
+      <!-- Right Hand Side Thin Sidebar Column (Work Exp & Education stacked vertically with logos) -->
+      <aside class="sidebar-column">
+        <!-- Experience -->
+        <div class="sidebar-section reveal-on-scroll">
+          <h2 class="sidebar-section-title">Work Experience</h2>
+          <ul class="side-list" id="experienceList"></ul>
+        </div>
 
-    <!-- News & Updates -->
-    <section class="section reveal-on-scroll">
-      <div class="section-header"><h2>News &amp; Updates</h2></div>
-      <div class="card">
-        <ul class="timeline" id="timelineList"></ul>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="section reveal-on-scroll">
-      <div class="section-header"><h2>Experience</h2></div>
-      <div class="card">
-        <ul class="exp-list" id="experienceList"></ul>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="section reveal-on-scroll">
-      <div class="section-header"><h2>Education</h2></div>
-      <div class="card">
-        <div id="educationList"></div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="section reveal-on-scroll">
-      <div class="section-header"><h2>Skills &amp; Tools</h2></div>
-      <div class="card">
-        <div class="skills-grid" id="skillsGrid"></div>
-      </div>
-    </section>
-
-    <!-- Achievements -->
-    <section class="section reveal-on-scroll">
-      <div class="section-header"><h2>Achievements</h2></div>
-      <div class="card">
-        <ul class="achievements" id="achievementsList"></ul>
-      </div>
-    </section>
-
-    <!-- Gallery -->
-    <section class="section reveal-on-scroll">
-      <div class="section-header">
-        <h2>Gallery</h2>
-        <a href="photography.html" class="section-link">Photography &rarr;</a>
-      </div>
-      <div class="gallery-grid" id="gallery"></div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="section reveal-on-scroll">
-      <div class="cta-section">
-        <h2 class="cta-heading">Interested in collaborating?</h2>
-        <p class="cta-sub">I'm open to research collaborations, visiting positions, and industry research opportunities. Let's connect.</p>
-        <a id="ctaEmail" href="mailto:adinparikh@gmail.com" class="cta-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          Get in touch
-        </a>
-      </div>
-    </section>
+        <!-- Education -->
+        <div class="sidebar-section reveal-on-scroll">
+          <h2 class="sidebar-section-title">Education</h2>
+          <div class="side-list" id="educationList"></div>
+        </div>
+      </aside>
+    </div>
   </main>
 
   <footer class="site-footer">

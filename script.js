@@ -35,7 +35,7 @@ function highlightAuthor(authors, name) {
 function renderPubTags(tags) {
   if (!Array.isArray(tags)) return '';
   return tags
-    .map(t => `<span class="pub-tag pub-tag--${t}">${TAG_LABELS[t] || t}</span>`)
+    .map(t => `<span class="pub-tag pub-tag--${t}">${TAG_LABELS[t] || t.replace(/-/g, ' ')}</span>`)
     .join('');
 }
 
@@ -49,17 +49,39 @@ function renderPubLinks(links) {
   return parts.length ? `<span class="pub-links">${parts.join('')}</span>` : '';
 }
 
-function renderPubItem(pub, authorName) {
-  return `
-    <li class="pub-item" data-year="${pub.year}" data-tags="${(pub.tags || []).join(' ')}">
-      <div class="pub-title">${pub.title || 'Untitled'}</div>
-      <div class="pub-authors">${highlightAuthor(pub.authors, authorName)}</div>
-      <div class="pub-venue">${pub.venue || ''}${pub.year ? ` (${pub.year})` : ''}</div>
-      <div class="pub-meta">
-        ${renderPubTags(pub.tags)}
-        ${renderPubLinks(pub.links)}
-      </div>
-    </li>`;
+function renderPubItem(pub, authorName, includeDetails = false) {
+  if (includeDetails) {
+    // Rich publication layout with thumbnail, full tags/keywords, short description, and published venue
+    const thumbSrc = pub.thumbnail || 'assets/photos/logo.png';
+    return `
+      <li class="pub-item" data-year="${pub.year}" data-tags="${(pub.tags || []).join(' ')}">
+        <img class="pub-thumb" src="${thumbSrc}" alt="Paper thumbnail" loading="lazy" data-lightbox>
+        <div class="pub-content">
+          <div class="pub-title">${pub.title || 'Untitled'}</div>
+          <div class="pub-authors">${highlightAuthor(pub.authors, authorName)}</div>
+          <div class="pub-venue">${pub.venue || ''}${pub.year ? ` (${pub.year})` : ''}</div>
+          ${pub.description ? `<div class="pub-desc">${pub.description}</div>` : ''}
+          <div class="pub-meta">
+            ${renderPubTags(pub.tags)}
+            ${renderPubLinks(pub.links)}
+          </div>
+        </div>
+      </li>`;
+  } else {
+    // Compact selected publication item layout for the Home page
+    return `
+      <li class="pub-item" data-year="${pub.year}">
+        <div class="pub-content">
+          <div class="pub-title">${pub.title || 'Untitled'}</div>
+          <div class="pub-authors">${highlightAuthor(pub.authors, authorName)}</div>
+          <div class="pub-venue">${pub.venue || ''}${pub.year ? ` (${pub.year})` : ''}</div>
+          <div class="pub-meta" style="margin-top: 0.6rem;">
+            ${renderPubTags(pub.tags)}
+            ${renderPubLinks(pub.links)}
+          </div>
+        </div>
+      </li>`;
+  }
 }
 
 /* ── Home page ── */
@@ -83,15 +105,15 @@ async function initHomePage() {
   $('heroHeadline').textContent = profile.headline || '';
   $('heroAffiliation').textContent = profile.affiliation || '';
   $('heroBio').textContent = profile.bio || '';
-  $('lastUpdated').textContent = profile.lastUpdated || '—';
+  if ($('lastUpdated')) $('lastUpdated').textContent = profile.lastUpdated || '—';
 
-  if (profile.profilePhoto) {
+  if (profile.profilePhoto && $('profilePhoto')) {
     $('profilePhoto').src = profile.profilePhoto;
   }
 
   // Links
   const heroLinks = $('heroLinks');
-  if (Array.isArray(profile.links)) {
+  if (heroLinks && Array.isArray(profile.links)) {
     heroLinks.innerHTML = profile.links
       .filter(l => l.label && l.url)
       .map(l => `<a class="hero-link" href="${l.url}" target="_blank" rel="noopener noreferrer">${ICONS[l.icon] || ''}${l.label}</a>`)
@@ -100,7 +122,7 @@ async function initHomePage() {
 
   // Open-to badges
   const openTo = $('heroOpenTo');
-  if (Array.isArray(profile.openTo) && profile.openTo.length) {
+  if (openTo && Array.isArray(profile.openTo) && profile.openTo.length) {
     openTo.innerHTML = profile.openTo
       .map(item => `<span class="open-badge">${item}</span>`)
       .join('');
@@ -108,108 +130,114 @@ async function initHomePage() {
 
   // Research focus pills
   const pills = $('researchPills');
-  if (Array.isArray(profile.researchFocusAreas)) {
+  if (pills && Array.isArray(profile.researchFocusAreas)) {
     pills.innerHTML = profile.researchFocusAreas
       .map(a => `<span class="pill">${a}</span>`)
       .join('');
   }
 
-  // Selected publications (first-author + oral, up to 5)
-  const selected = publications
-    .filter(p => (p.tags || []).some(t => t === 'first-author' || t === 'oral'))
-    .sort((a, b) => (b.year || 0) - (a.year || 0))
-    .slice(0, 5);
-  $('selectedPubs').innerHTML = selected.length
-    ? selected.map(p => renderPubItem(p, profile.name)).join('')
-    : '<li class="pub-item" style="color:var(--text-muted)">No publications yet.</li>';
+  // About Me section (Captioned Pictures)
+  const aboutGrid = $('aboutGrid');
+  if (aboutGrid && Array.isArray(profile.photography)) {
+    aboutGrid.innerHTML = profile.photography.map(p => `
+      <figure class="about-photo-card">
+        <img src="${p.src}" alt="${p.alt || ''}" loading="lazy" data-lightbox>
+        <figcaption>
+          <div class="about-photo-title">${p.title || ''}</div>
+          <div class="about-photo-caption">${p.caption || ''}</div>
+        </figcaption>
+      </figure>`).join('');
+  }
 
-  // Highlighted works
+  // Highlighted works (up to 6 items)
   const hlGrid = $('highlightedWorks');
-  const works = Array.isArray(profile.highlightedWorks) ? profile.highlightedWorks : [];
-  hlGrid.innerHTML = works.length
-    ? works.map(w => `
-        <article class="highlight-card">
-          ${w.image ? `<img src="${w.image}" alt="${w.title || ''}" loading="lazy" data-lightbox>` : ''}
-          <div class="hl-body">
-            ${w.concept ? `<span class="concept-tag">${w.concept}</span>` : ''}
-            <div class="hl-title">${w.title || ''}</div>
-            <div class="hl-desc">${w.description || ''}</div>
-          </div>
-        </article>`).join('')
-    : '<p style="color:var(--text-muted)">No highlighted works yet.</p>';
+  if (hlGrid) {
+    const works = Array.isArray(profile.highlightedWorks) ? profile.highlightedWorks.slice(0, 6) : [];
+    hlGrid.innerHTML = works.length
+      ? works.map(w => `
+          <article class="highlight-card">
+            ${w.image ? `<img src="${w.image}" alt="${w.title || ''}" loading="lazy" data-lightbox>` : ''}
+            <div class="hl-body">
+              ${w.concept ? `<span class="concept-tag">${w.concept}</span>` : ''}
+              <div class="hl-title">${w.title || ''}</div>
+              <div class="hl-desc">${w.description || ''}</div>
+            </div>
+          </article>`).join('')
+      : '<p style="color:var(--text-muted)">No highlighted works available.</p>';
+  }
+
+  // Selected publications
+  const selectedEl = $('selectedPubs');
+  if (selectedEl) {
+    const selected = publications
+      .filter(p => (p.tags || []).some(t => t === 'first-author' || t === 'oral'))
+      .sort((a, b) => (b.year || 0) - (a.year || 0))
+      .slice(0, 5);
+    selectedEl.innerHTML = selected.length
+      ? selected.map(p => renderPubItem(p, profile.name, false)).join('')
+      : '<li class="pub-item" style="color:var(--text-muted)">No publications yet.</li>';
+  }
 
   // Timeline
-  $('timelineList').innerHTML = Array.isArray(updates) && updates.length
-    ? updates.map(u => `
-        <li>
-          <span class="timeline-date">${u.date || ''}</span>
-          <span class="timeline-title">${u.title || ''}</span>
-          <div class="timeline-detail">${u.details || ''}</div>
-        </li>`).join('')
-    : '<li style="color:var(--text-muted)">No updates yet.</li>';
+  const timelineEl = $('timelineList');
+  if (timelineEl) {
+    timelineEl.innerHTML = Array.isArray(updates) && updates.length
+      ? updates.map(u => `
+          <li>
+            <span class="timeline-date">${u.date || ''}</span>
+            <span class="timeline-title">${u.title || ''}</span>
+            <div class="timeline-detail">${u.details || ''}</div>
+          </li>`).join('')
+      : '<li style="color:var(--text-muted)">No updates yet.</li>';
+  }
 
-  // Experience
-  $('experienceList').innerHTML = Array.isArray(profile.workExperience)
-    ? profile.workExperience.map(e => `
-        <li class="exp-item">
-          <div class="exp-role">${e.role || ''}</div>
-          <div class="exp-org">${e.org || ''}</div>
-          <div class="exp-period">${e.period || ''}</div>
-          <div class="exp-summary">${e.summary || ''}</div>
-        </li>`).join('')
-    : '<li style="color:var(--text-muted)">No experience listed.</li>';
+  // Experience sidebar list with stacked layout and logos
+  const expEl = $('experienceList');
+  if (expEl) {
+    expEl.innerHTML = Array.isArray(profile.workExperience)
+      ? profile.workExperience.map(e => `
+          <li class="side-item">
+            <img class="side-logo" src="${e.logo || 'assets/photos/logo.png'}" alt="Company Logo" loading="lazy">
+            <div class="side-details">
+              <div class="side-role">${e.role || ''}</div>
+              <div class="side-org">${e.org || ''}</div>
+              <div class="side-period">${e.period || ''}</div>
+              ${e.summary ? `<div class="side-focus">${e.summary}</div>` : ''}
+            </div>
+          </li>`).join('')
+      : '<li style="color:var(--text-muted)">No experience listed.</li>';
+  }
 
-  // Education
+  // Education sidebar list with stacked layout and logos
   const eduEl = $('educationList');
-  if (Array.isArray(profile.education)) {
-    eduEl.innerHTML = profile.education.map(e => `
-      <div class="edu-item">
-        <div class="edu-degree">${e.degree || ''}</div>
-        <div class="edu-institution">${e.institution || ''}${e.location ? `, ${e.location}` : ''}</div>
-        <div class="edu-period">${e.period || ''}</div>
-        ${e.focus ? `<div class="edu-focus">${e.focus}</div>` : ''}
-      </div>`).join('');
+  if (eduEl) {
+    eduEl.innerHTML = Array.isArray(profile.education)
+      ? profile.education.map(e => `
+          <div class="side-item">
+            <img class="side-logo" src="${e.logo || 'assets/photos/logo.png'}" alt="University Logo" loading="lazy">
+            <div class="side-details">
+              <div class="side-role">${e.degree || ''}</div>
+              <div class="side-org">${e.institution || ''}</div>
+              <div class="side-period">${e.period || ''}</div>
+              ${e.focus ? `<div class="side-focus">${e.focus}</div>` : ''}
+            </div>
+          </div>`).join('')
+      : '<p style="color:var(--text-muted)">No education listed.</p>';
   }
-
-  // Skills
-  const skillsGrid = $('skillsGrid');
-  if (profile.skills) {
-    const map = { languages: 'Languages', frameworks: 'Frameworks & Libraries', tools: 'Tools & Infra', cloud: 'Cloud' };
-    skillsGrid.innerHTML = Object.entries(map)
-      .filter(([k]) => Array.isArray(profile.skills[k]))
-      .map(([k, label]) => `
-        <div>
-          <div class="skill-group-label">${label}</div>
-          <div class="skill-tags">${profile.skills[k].map(s => `<span class="skill-tag">${s}</span>`).join('')}</div>
-        </div>`).join('');
-  }
-
-  // Achievements
-  const achEl = $('achievementsList');
-  if (Array.isArray(profile.achievements)) {
-    achEl.innerHTML = profile.achievements
-      .map(a => `<li>${a}</li>`)
-      .join('');
-  }
-
-  // Gallery
-  const gallery = $('gallery');
-  const photos = Array.isArray(profile.galleryPhotos) ? profile.galleryPhotos : [];
-  gallery.innerHTML = photos.length
-    ? photos.map(p => `<img src="${p.src}" alt="${p.alt || 'Gallery photo'}" loading="lazy" data-lightbox>`).join('')
-    : '<p style="color:var(--text-muted)">No photos yet. Add images to assets/photos/ and update data/profile.json.</p>';
 
   // CTA email
   const emailLink = (profile.links || []).find(l => l.icon === 'email');
-  if (emailLink) {
+  if (emailLink && $('ctaEmail')) {
     $('ctaEmail').href = emailLink.url;
   }
 
   // Footer links
-  $('footerLinks').innerHTML = (profile.links || [])
-    .filter(l => l.label && l.url)
-    .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${l.label}</a>`)
-    .join('');
+  if ($('footerLinks')) {
+    $('footerLinks').innerHTML = (profile.links || [])
+      .filter(l => l.label && l.url)
+      .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${l.label}</a>`)
+      .join('');
+  }
 }
 
 /* ── Publications page ── */
@@ -224,67 +252,35 @@ async function initPublicationsPage() {
   ]);
 
   const authorName = profile.name || 'Aditya Parikh';
-
-  // Stats
-  const statsEl = document.getElementById('pubStats');
-  const totalPubs = publications.length;
-  const firstAuthor = publications.filter(p => (p.tags || []).includes('first-author')).length;
-  const orals = publications.filter(p => (p.tags || []).includes('oral')).length;
   const years = [...new Set(publications.map(p => p.year))].sort((a, b) => b - a);
-
-  statsEl.innerHTML = `
-    <div class="pub-stat"><div class="pub-stat-num">${totalPubs}</div><div class="pub-stat-label">Publications</div></div>
-    <div class="pub-stat"><div class="pub-stat-num">${firstAuthor}</div><div class="pub-stat-label">First Author</div></div>
-    <div class="pub-stat"><div class="pub-stat-num">${orals}</div><div class="pub-stat-label">Oral Presentations</div></div>
-    <div class="pub-stat"><div class="pub-stat-num">${years.length}</div><div class="pub-stat-label">Active Years</div></div>
-  `;
 
   // Filters
   const filtersEl = document.getElementById('pubFilters');
-  filtersEl.innerHTML = `<button class="pub-filter active" data-filter="all">All</button>`
-    + years.map(y => `<button class="pub-filter" data-filter="${y}">${y}</button>`).join('');
+  if (filtersEl) {
+    filtersEl.innerHTML = `<button class="pub-filter active" data-filter="all">All</button>`
+      + years.map(y => `<button class="pub-filter" data-filter="${y}">${y}</button>`).join('');
 
-  filtersEl.addEventListener('click', e => {
-    const btn = e.target.closest('.pub-filter');
-    if (!btn) return;
-    filtersEl.querySelectorAll('.pub-filter').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    container.querySelectorAll('.pub-year-group').forEach(group => {
-      group.style.display = (filter === 'all' || group.dataset.year === filter) ? '' : 'none';
+    filtersEl.addEventListener('click', e => {
+      const btn = e.target.closest('.pub-filter');
+      if (!btn) return;
+      filtersEl.querySelectorAll('.pub-filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      container.querySelectorAll('.pub-year-group').forEach(group => {
+        group.style.display = (filter === 'all' || group.dataset.year === filter) ? '' : 'none';
+      });
     });
-  });
+  }
 
-  // Render grouped by year
+  // Render publications with rich layout (includeDetails = true)
   container.innerHTML = years.map(year => {
     const yearPubs = publications.filter(p => p.year === year || String(p.year) === String(year));
     return `
       <div class="pub-year-group" data-year="${year}">
         <div class="pub-year-label">${year}</div>
-        <ul class="pub-list">${yearPubs.map(p => renderPubItem(p, authorName)).join('')}</ul>
+        <ul class="pub-list">${yearPubs.map(p => renderPubItem(p, authorName, true)).join('')}</ul>
       </div>`;
   }).join('');
-}
-
-/* ── Photography page ── */
-
-async function initPhotographyPage() {
-  const stories = document.getElementById('photoStories');
-  if (!stories) return;
-
-  const profile = await loadJson('data/profile.json');
-  const photos = Array.isArray(profile.photography) ? profile.photography : [];
-
-  stories.innerHTML = photos.length
-    ? photos.map(p => `
-        <figure class="photo-story">
-          <img src="${p.src}" alt="${p.alt || ''}" loading="lazy" data-lightbox>
-          <figcaption>
-            <div class="ps-title">${p.title || ''}</div>
-            <div class="ps-caption">${p.caption || ''}</div>
-          </figcaption>
-        </figure>`).join('')
-    : '<p style="color:var(--text-muted)">No photography entries yet. Add them in data/profile.json under "photography".</p>';
 }
 
 /* ── Lightbox ── */
@@ -348,11 +344,11 @@ function initScrollReveal() {
         }
       });
     },
-    { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
   );
 
   els.forEach((el, i) => {
-    el.style.transitionDelay = `${i * 60}ms`;
+    el.style.transitionDelay = `${(i % 5) * 50}ms`;
     observer.observe(el);
   });
 }
@@ -366,7 +362,6 @@ async function bootstrap() {
   const results = await Promise.allSettled([
     initHomePage(),
     initPublicationsPage(),
-    initPhotographyPage(),
   ]);
 
   initScrollReveal();
@@ -376,7 +371,7 @@ async function bootstrap() {
     console.error('Load error:', err.reason);
     const note = document.createElement('p');
     note.style.cssText = 'text-align:center;color:var(--text-muted);padding:2rem;font-size:0.9rem;';
-    note.textContent = 'Could not load some content. If you opened the HTML directly, run: python -m http.server 8000';
+    note.textContent = 'Could not load some content. If you opened the HTML directly, please serve via HTTP server.';
     document.querySelector('main')?.appendChild(note);
   }
 }

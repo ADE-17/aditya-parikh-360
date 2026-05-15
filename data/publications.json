@@ -1,114 +1,271 @@
 [
   {
+    "title": "Towards Fairness under Label Bias in Image Segmentation: Impact, Measurement and Mitigation",
+    "authors": "Aditya Parikh, Stella Frank, Sneha Das, Aasa Feragen",
+    "venue": "Under review",
+    "year": 2026,
+    "tags": [
+      "under-review",
+      "first-author",
+      "fairness",
+      "label-bias"
+    ],
+    "thumbnail": "assets/photos/1.png",
+    "description": "Label bias is insidious: We measure and mitigate it in image segmentation without clean, unbiased ground truth labels even when standard metrics don't allow. We also show a subgroup separability effect induced due to label bias.",
+    "links": {
+      "paper": "",
+      "arxiv": "https://arxiv.org/abs/2605.06891",
+      "code": ""
+    }
+  },
+  {
     "title": "Measuring What VLMs Don't Say: Validation Metrics Hide Clinical Terminology Erasure in Radiology Report Generation",
     "authors": "Aditya Parikh, Aasa Feragen, Sneha Das, Stella Frank",
     "venue": "Under review",
     "year": 2026,
-    "tags": ["under-review", "first-author"],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "under-review",
+      "first-author",
+      "radiology-vlm",
+      "metrics-gap"
+    ],
+    "thumbnail": "assets/photos/2.png",
+    "description": "Standard validation metrics hide severe clinical terminology erasure in report generation (RRG), proposing CAD/WAE which measures displacement between word-association between human reference and predicted reports.",
+    "links": {
+      "paper": "",
+      "arxiv": "https://arxiv.org/abs/2603.01625",
+      "code": ""
+    }
   },
   {
     "title": "Fair Lung Disease Diagnosis from Chest CT via Gender-Adversarial Attention Multiple Instance Learning",
     "authors": "Aditya Parikh, Aasa Feragen",
     "venue": "CVPR Workshop (PHAROS-AIF-MIH)",
     "year": 2026,
-    "tags": ["under-review", "first-author", "workshop"],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "under-review",
+      "first-author",
+      "workshop",
+      "fairness",
+      "mil"
+    ],
+    "thumbnail": "assets/photos/3.png",
+    "description": "CVPR Workshop SUbmission: A concept-level balancing network utilizing gender-adversarial attention weights to decouple demographic attributes from predictive features in multiple instance learning architectures.",
+    "links": {
+      "paper": "",
+      "arxiv": "https://arxiv.org/abs/2603.12988",
+      "code": ""
+    }
   },
   {
     "title": "Investigating Label Bias and Representational Sources of Age-Related Disparities in Medical Segmentation",
     "authors": "Aditya Parikh, Sneha Das, Aasa Feragen",
     "venue": "ISBI",
     "year": 2026,
-    "tags": ["oral", "first-author"],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "oral",
+      "first-author",
+      "label-bias",
+      "segmentation"
+    ],
+    "thumbnail": "assets/photos/4.png",
+    "description": "First study on label bias in segmentation, demonstrating how standard Dice scores obscure underlying representational harms and how automated machine-generated labels can cause more harm than they help.",
+    "links": {
+      "paper": "",
+      "arxiv": "https://arxiv.org/abs/2511.00477",
+      "code": ""
+    }
   },
   {
     "title": "Who Does Your Algorithm Fail? Investigating Age and Ethnic Bias in the MAMA-MIA Dataset",
     "authors": "Aditya Parikh, Sneha Das, Aasa Feragen",
     "venue": "MedEurIPS (NeurIPS-endorsed workshop)",
     "year": 2025,
-    "tags": ["oral", "first-author", "workshop"],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "oral",
+      "first-author",
+      "workshop",
+      "subgroup-audit"
+    ],
+    "thumbnail": "assets/photos/4.png",
+    "description": "Providing empirical evidence of severe disparity curves under demographic shifts.",
+    "links": {
+      "paper": "",
+      "arxiv": "https://arxiv.org/abs/2510.27421",
+      "code": ""
+    }
   },
   {
     "title": "Leveraging Transfer Learning with Class-Specific Decoders for Laparoscopic Segmentation",
     "authors": "Priya Priya*, Aditya Parikh*, et al.",
     "venue": "IEEE Workshop on Big Data Analytics for Medical Imaging",
     "year": 2025,
-    "tags": ["equal-contribution", "workshop"],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "equal-contribution",
+      "workshop",
+      "transfer-learning"
+    ],
+    "thumbnail": "assets/photos/thumb-2.png",
+    "description": "Proposes decoupled class-specific decoder branches optimized with cross-level shared encoders to mitigate significant foreground-background class imbalance.",
+    "links": {
+      "paper": "",
+      "arxiv": "https://ieeexplore.ieee.org/abstract/document/11401034/",
+      "code": ""
+    }
   },
   {
     "title": "Representation Learning for Laparoscopic Imaging: A Study of Architectural Design and Multi-Level Knowledge Transfer",
     "authors": "Aditya Parikh, Sai Jitin Jami, et al.",
     "venue": "Master Thesis, OpenFAU",
     "year": 2025,
-    "tags": ["first-author", "thesis"],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "first-author",
+      "thesis",
+      "architectural-design"
+    ],
+    "thumbnail": "assets/photos/thumb-3.png",
+    "description": "Comprehensive study of embedding topology and multi-stage self-supervised pre-training to improve laparoscopic surgical view representations.",
+    "links": {
+      "paper": "https://open.fau.de/items/f2eebc70-dfa4-4124-a969-9e51c6a1ec62",
+      "arxiv": "",
+      "code": ""
+    }
   },
   {
     "title": "Learning from a Few Shots: Data-efficient Cervical Vertebral Maturation Assessment",
     "authors": "Helen Schneider*, Aditya Parikh*, et al.",
     "venue": "MIDL",
     "year": 2025,
-    "tags": ["equal-contribution"],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "equal-contribution",
+      "few-shot"
+    ],
+    "thumbnail": "assets/photos/thumb-1.png",
+    "description": "Establishes a highly efficient prototypical metric learning approach capable of accurate skeletal maturity stage prediction from extremely sparse labeled examples.",
+    "links": {
+      "paper": "https://openreview.net/forum?id=CykTyfqXcl",
+      "arxiv": "",
+      "code": ""
+    }
   },
   {
     "title": "Effective Disjoint Representational Learning for Anatomical Segmentation",
     "authors": "Priya Priya*, Aditya Parikh*, et al.",
     "venue": "MIDL",
     "year": 2025,
-    "tags": ["equal-contribution"],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "equal-contribution",
+      "disjoint-representations"
+    ],
+    "thumbnail": "assets/photos/thumb-2.png",
+    "description": "Decouples anatomical features from modality-specific texture channels using mutual information minimization constraints to achieve strong generalization.",
+    "links": {
+      "paper": "https://openreview.net/forum?noteId=bidt9WsLiE",
+      "arxiv": "",
+      "code": ""
+    }
   },
   {
     "title": "First Investigation of Deep Learning for Intraoperative Gauze Segmentation in Minimally Invasive Abdominal Surgery",
     "authors": "Priya Priya*, Aditya Parikh, et al.",
     "venue": "IEEE DSAA",
     "year": 2025,
-    "tags": [],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "surgery-vision"
+    ],
+    "thumbnail": "assets/photos/thumb-3.png",
+    "description": "Pioneering empirical validation of real-time multi-scale segmentation backbones detecting blood-soaked gauze pads under surgical fluid occlusion.",
+    "links": {
+      "paper": "https://ieeexplore.ieee.org/abstract/document/11248028/",
+      "arxiv": "",
+      "code": ""
+    }
   },
   {
     "title": "The Potential of Acknowledging the Unknown: Single Positive Multi-label Learning in Medical Image Processing",
     "authors": "Helen Schneider, Priya Priya, Aditya Parikh, et al.",
     "venue": "MIDL",
     "year": 2024,
-    "tags": [],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "weak-labels",
+      "single-positive"
+    ],
+    "thumbnail": "assets/photos/thumb-1.png",
+    "description": "Adapts loss functions to treat unobserved classes as latent unknowns rather than strict negatives, outperforming standard binary cross-entropy baselines.",
+    "links": {
+      "paper": "https://openreview.net/forum?id=UDzWBT3Rgu",
+      "arxiv": "",
+      "code": ""
+    }
   },
   {
     "title": "Informed Deep Abstaining Classifier: Investigating Noise-Robust Training for Diagnostic Decision Support Systems",
     "authors": "Helen Schneider, Sebastian Nowak, Aditya Parikh, et al.",
     "venue": "ICONIP",
     "year": 2024,
-    "tags": [],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "abstaining-classifier",
+      "label-noise"
+    ],
+    "thumbnail": "assets/photos/thumb-2.png",
+    "description": "Integrates confidence thresholds directly into backpropagation updates allowing networks to safely abstain on highly noisy samples during clinical training.",
+    "links": {
+      "paper": "https://link.springer.com/chapter/10.1007/978-981-96-6960-8_28",
+      "arxiv": "",
+      "code": ""
+    }
   },
   {
     "title": "Mandibular Advancement Devices: Impact on Occlusal Dynamics and Tooth Alignment Modifications",
     "authors": "Aylin Uyaner, Helen Schneider, Aditya Parikh, et al.",
     "venue": "Dentistry Journal (MDPI)",
     "year": 2024,
-    "tags": ["journal"],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "journal",
+      "clinical-analysis"
+    ],
+    "thumbnail": "assets/photos/thumb-3.png",
+    "description": "Quantitative spatio-temporal study of long-term mandibular device integration tracking sub-millimeter displacement dynamics in patient cohorts.",
+    "links": {
+      "paper": "https://www.mdpi.com/2304-6767/12/11/370",
+      "arxiv": "",
+      "code": ""
+    }
   },
   {
     "title": "Exploring Facial Biomarkers for Depression through Temporal Analysis of Action Units",
     "authors": "Aditya Parikh, Misha Sadegi, Bjorn Eskofier",
     "venue": "Project Thesis",
     "year": 2024,
-    "tags": ["first-author", "thesis"],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "first-author",
+      "thesis",
+      "temporal-analysis"
+    ],
+    "thumbnail": "assets/photos/thumb-1.png",
+    "description": "Fuses multi-frame facial action unit activations with physiological signals using sequence-to-sequence transformers to predict clinical depression scale attributes.",
+    "links": {
+      "paper": "",
+      "arxiv": "https://arxiv.org/abs/2407.13753",
+      "code": ""
+    }
   },
   {
     "title": "Information Extraction from Unstructured Data using Augmented-AI and Computer Vision",
     "authors": "Aditya Parikh",
     "venue": "IJERT",
     "year": 2022,
-    "tags": ["first-author", "journal"],
-    "links": { "paper": "", "arxiv": "", "code": "" }
+    "tags": [
+      "first-author",
+      "journal",
+      "document-ai"
+    ],
+    "thumbnail": "assets/photos/thumb-2.png",
+    "description": "Presents a hybrid bounding-box OCR and semantic field detection pipeline deployed on historical population census microfilms to automate digitization.",
+    "links": {
+      "paper": "",
+      "arxiv": "https://arxiv.org/abs/2312.09880",
+      "code": ""
+    }
   }
 ]

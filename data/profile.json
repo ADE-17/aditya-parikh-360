@@ -1,23 +1,39 @@
 {
   "name": "Aditya Parikh",
-  "headline": "Machine Learning Researcher | PhD Student",
-  "affiliation": "Department of Applied Mathematics and Computer Science, Technical University of Denmark",
-  "bio": "I work to build trustworthy and reliable AI systems. My current focus is on developing evaluation methods, metrics and bias mitigation strategies for clinical usuage.",
-  "profilePhoto": "assets/photos/profile.jpg",
+  "headline": "Machine Learning Researcher | PhD Student | Generalist",
+  "affiliation": "Department of Applied Mathematics and Computer Science, Technical University of Denmark (DTU Compute)",
+  "bio": "Optimizing not only for performance but also for fairness, generalizability and robustness. I'm interested in building frameworks that expose when standard evaluation/metrics, which we often trust blindly. I'm into a fast-moving, cross-disciplinary environments because I believe the most important questions rarely sit neatly in one field.",
+  "profilePhoto": "assets/photos/IMG_1696.jpg",
   "openTo": [
-    "Research Collaborations",
-    "Academic Visiting Positions",
-    "Industry Research Internships"
+    "Collaborations",
+    "Academic Visiting",
+    "Industry Internships"
   ],
   "links": [
-    { "label": "Email", "url": "mailto:adipa@dtu.dk", "icon": "email" },
-    { "label": "GitHub", "url": "https://github.com/ADE-17", "icon": "github" },
-    { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=39mK19EAAAAJ&hl=en", "icon": "scholar" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/adinparikh/", "icon": "linkedin" }
+    {
+      "label": "Email",
+      "url": "mailto:adipa@dtu.dk",
+      "icon": "email"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/ADE-17",
+      "icon": "github"
+    },
+    {
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=39mK19EAAAAJ&hl=en",
+      "icon": "scholar"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/adinparikh/",
+      "icon": "linkedin"
+    }
   ],
   "currentWorkSummary": "Current work centers on responsible medical AI: evaluating and improving clinical reliability of vision and vision-language models under real-world bias and distribution shift.",
   "currentWorkItems": [
-    "PhD research at DTU Compute on trustworthy vision and vision-language models for radiology.",
+    "PhD research at DTU Compute",
     "Analyzing decoding behavior, saliency alignment, and clinical terminology fidelity in report generation.",
     "Studying fairness across age, gender, and ethnicity with robust subgroup evaluation protocols."
   ],
@@ -28,7 +44,8 @@
     "Report Generation Fidelity",
     "Robustness & Distribution Shift",
     "Effects of Label Bias",
-    "Fairness in Image Segmentation"
+    "Fairness in AI",
+    "Medical Image Segmentation"
   ],
   "education": [
     {
@@ -36,14 +53,16 @@
       "institution": "Technical University of Denmark (DTU Compute)",
       "location": "Copenhagen, Denmark",
       "period": "Sep 2025 – Present",
-      "focus": "Responsible AI"
+      "focus": "Responsible AI",
+      "logo": "assets/photos/DTU_Logo_Hvid.jpg"
     },
     {
       "degree": "M.Sc. in ACES (AI & Connectivity)",
       "institution": "Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)",
       "location": "Erlangen, Germany",
       "period": "Oct 2022 – April 2025",
-      "focus": "Thesis: Representation Learning for Laparoscopic Imaging (Grade: 1.7)"
+      "focus": "Thesis: Representation Learning for Laparoscopic Imaging (Grade: 1.7)",
+      "logo": "assets/photos/FAU-New-Logo.png"
     }
   ],
   "workExperience": [
@@ -51,102 +70,91 @@
       "role": "Doctoral Researcher",
       "org": "DTU Compute, Denmark",
       "period": "Sep 2025 – Present",
-      "summary": "PhD research on Responsible AI — developing and rigorously evaluating vision and vision-language models for medical data, analyzing decoding effects, saliency behavior, bias/fairness, and clinical fidelity."
+      "summary": "PhD research on Responsible AI",
+      "logo": "assets/photos/DTU_Logo_Hvid.jpg"
     },
     {
       "role": "Research Assistant (Machine Learning)",
       "org": "Fraunhofer IAIS, Germany",
       "period": "Sep 2023 – Aug 2025",
-      "summary": "Built VLM and weak/single-positive learning pipelines for medical imaging (report-to-image generation, CVM classification, CheXpert-style labels), improving accuracy and reducing annotation cost."
+      "summary": "Built VLM and weak/single-positive learning pipelines for medical imaging (report-to-image generation, CVM classification, CheXpert-style labels), improving accuracy and reducing annotation cost.",
+      "logo": "assets/photos/fraunhofer-vector-logo.png"
     },
     {
       "role": "Master Thesis Student",
       "org": "MAD Lab (with Fraunhofer IAIS), FAU",
       "period": "Dec 2024 – May 2025",
-      "summary": "Designed encoder-decoder segmentation frameworks with organ-specific decoders and knowledge sharing for laparoscopic imaging under class imbalance."
+      "summary": "Designed encoder-decoder segmentation frameworks with organ-specific decoders and knowledge sharing for laparoscopic imaging under class imbalance.",
+      "logo": "assets/photos/fraunhofer-vector-logo.png"
     },
     {
       "role": "Research Internship (Project Thesis)",
       "org": "MAD Lab, FAU, Germany",
       "period": "Aug 2023 – May 2024",
-      "summary": "Developed multimodal depression predictive model using facial and physiological signals to identify facial expression attributes linked to clinical depression."
+      "summary": "Developed multimodal depression predictive model using facial and physiological signals to identify facial expression attributes linked to clinical depression.",
+      "logo": "assets/photos/cropped-rz1_MaDLogo_interim_CMYK.png"
     },
     {
       "role": "Research Assistant (Algorithm Development)",
       "org": "Fraunhofer IIS, Germany",
       "period": "Jan 2023 – Aug 2023",
-      "summary": "Developed adaptive filtering methods for non-stationary automotive acoustic echo cancellation, improving early convergence by ~35% and runtime efficiency by 12%."
+      "summary": "Developed adaptive filtering methods for non-stationary automotive acoustic echo cancellation, improving early convergence by ~35% and runtime efficiency by 12%.",
+      "logo": "assets/photos/fraunhofer-vector-logo.png"
     },
     {
       "role": "Deep Learning Engineer (Intern)",
       "org": "PixelApps.io, India",
       "period": "Jul 2022 – Sep 2022",
-      "summary": "Built a school attendance pipeline achieving 97%+ accuracy across varied lighting/poses, robust to camera angle."
+      "summary": "Built a school attendance pipeline achieving 97%+ accuracy across varied lighting/poses, robust to camera angle.",
+      "logo": "assets/photos/thumb-1.png"
     },
     {
       "role": "Machine Learning Engineer (Intern)",
       "org": "BizAmica Softwares, India",
       "period": "May 2021 – Dec 2022",
-      "summary": "Co-designed an AI-powered document processing system that reduced manual entry time by 10x for Indian population census data (1950–2010)."
+      "summary": "Co-designed an AI-powered document processing system that reduced manual entry time by 10x for Indian population census data (1950–2010).",
+      "logo": "assets/photos/images.png"
     }
-  ],
-  "skills": {
-    "languages": ["Python", "C++", "LaTeX", "MATLAB", "SQL"],
-    "frameworks": ["PyTorch", "HuggingFace", "PyTorch Lightning", "NumPy", "Pandas", "Scikit-learn", "Matplotlib", "TensorBoard", "W&B"],
-    "tools": ["Git", "Bash", "Linux", "Docker", "ONNX", "Jupyter", "SLURM", "MPI"],
-    "cloud": ["AWS", "Google Cloud Platform", "Azure ML"]
-  },
-  "achievements": [
-    "Teaching Assistant for Responsible AI course (70+ students) at DTU",
-    "Peer Reviewer: MedEurIPS, ICAPSS, Medical Image Analysis (MedIA)",
-    "Hackathon Winner: Smart Farming (2024), Kicklehack (2024)",
-    "Kaggle Expert — Notebook rank #1500",
-    "MachineHack Global Rank 310 (top 4%)"
-  ],
-  "galleryPhotos": [
-    { "src": "assets/photos/profile.jpg", "alt": "Profile photo" },
-    { "src": "assets/photos/research-1.jpg", "alt": "Research activity" },
-    { "src": "assets/photos/talk-1.jpg", "alt": "Conference talk" }
   ],
   "highlightedWorks": [
     {
       "title": "Clinical Terminology Erasure in Radiology VLMs",
       "concept": "Reliability Metric Gap",
       "description": "Shows how conventional generation metrics can miss clinically meaningful terminology drops.",
-      "image": "assets/photos/highlight-1.jpg"
+      "image": "assets/photos/highlight-1.png"
     },
     {
       "title": "Label Bias and Age-Disparity Analysis",
       "concept": "Fairness Diagnostics",
       "description": "Visualizes subgroup disparity sources and representational shifts in segmentation performance.",
-      "image": "assets/photos/highlight-2.jpg"
+      "image": "assets/photos/highlight-2.png"
     },
     {
       "title": "Fair Lung Disease Diagnosis with Adversarial Attention",
       "concept": "Bias Mitigation",
       "description": "Highlights concept-level balancing strategies for chest CT classification and fairness.",
-      "image": "assets/photos/highlight-3.jpg"
+      "image": "assets/photos/highlight-3.png"
     }
   ],
   "photography": [
     {
-      "title": "Conference Day",
-      "caption": "A moment before presenting ongoing work and discussing future directions.",
-      "src": "assets/photos/talk-1.jpg",
-      "alt": "Conference talk setting"
+      "title": "Presenting at ISBI",
+      "caption": "Sharing ongoing research on label bias and age-related performance disparities with the medical imaging community.",
+      "src": "assets/photos/highlight-2.png",
+      "alt": "Conference presentation slide"
     },
     {
-      "title": "Lab Work",
-      "caption": "Daily research workflow: experiments, ablations, and result validation.",
-      "src": "assets/photos/research-1.jpg",
-      "alt": "Research desk and setup"
+      "title": "Radiology Report Generation Validation",
+      "caption": "Investigating textual metrics vs clinical terminology retention in modern vision-language decoder pipelines.",
+      "src": "assets/photos/highlight-1.png",
+      "alt": "Research analysis frame"
     },
     {
-      "title": "Field Note",
-      "caption": "A quiet frame from my day that reflects patience and observation in research.",
-      "src": "assets/photos/photo-1.jpg",
-      "alt": "Personal photography frame"
+      "title": "Concept-Level Balancing Experiments",
+      "caption": "Visualizing gender-adversarial attention maps to ensure fair predictive distributions across protected groups.",
+      "src": "assets/photos/highlight-3.png",
+      "alt": "Fairness attention mapping"
     }
   ],
-  "lastUpdated": "2026-04-15"
+  "lastUpdated": "2026-05-14"
 }
