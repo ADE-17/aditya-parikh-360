@@ -118,9 +118,9 @@
   ],
   "highlightedWorks": [
     {
-      "title": "Clinical Terminology Erasure in Radiology VLMs",
-      "concept": "Reliability Metric Gap",
-      "description": "Shows how conventional generation metrics can miss clinically meaningful terminology drops.",
+      "title": "Demographic association shift in report generation",
+      "concept": "Measuring what your model 'don't' say",
+      "description": "pip install cad-wae",
       "image": "assets/photos/highlight-1.png"
     }
   ],
